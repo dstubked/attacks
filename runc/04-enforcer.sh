@@ -1,0 +1,2 @@
+#!/bin/bash
+docker run -d --name aqua-enforcer-4.2.19194 -e AQUA_TOKEN=e254a5f5-7551-40de-b45f-63ea6c4fe705 -e AQUA_SERVER=172.28.128.38:3622 -e AQUA_LOGICAL_NAME="Default" --restart=always --privileged --pid=host --userns=host -v /var/run:/var/run -v /dev:/dev -v /opt/aquasec:/host/opt/aquasec:ro -v /opt/aquasec/tmp:/opt/aquasec/tmp -v /opt/aquasec/audit:/opt/aquasec/audit -v /proc:/host/proc:ro -v /sys:/host/sys:ro -v /etc:/host/etc:ro registry.aquasec.com/enforcer:4.2.19194
